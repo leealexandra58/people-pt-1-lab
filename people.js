@@ -11,3 +11,6 @@ db.people.find({ $or: [{ state: "Virginia" }, { first_name: "Virginia" }] })
 db.people.find({ age: { $lt: 30 } }, { first_name: true, last_name: true })
 db.people.find({ state: "Montana" }, { age: false })
 db.people.find({ email: /.edu$/}, { email: true })
+
+db.people.find({ children: [] })
+db.people.find({ children: { $gt: [] } })
